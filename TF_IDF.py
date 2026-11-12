@@ -91,10 +91,11 @@ print(tf_idf)
 
 
 
-
+"""
 #사이킷 런 사용
 
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 corpus = [
     'you know I want your love',
@@ -104,5 +105,10 @@ corpus = [
 
 vector = CountVectorizer()
 
+tfidfv = TfidfVectorizer().fit(corpus)
+
 
 print(vector.fit_transform(corpus).toarray())
+print(tfidfv.transform(corpus).toarray())
+"""
+
