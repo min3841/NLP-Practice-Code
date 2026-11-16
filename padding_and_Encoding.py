@@ -12,8 +12,6 @@ stop_word = stopwords.words("english")
 
 sentences = sent_tokenize(raw_text)
 
-vocab = {}
-
 preprocesed_sentences = []
 
 for words in sentences:
@@ -31,12 +29,6 @@ for words in sentences:
             if len(word) > 2:
 
                 result.append(word)
-
-                if word not in vocab:
-
-                    vocab[word] = 0
-
-                vocab[word] += 1
 
     preprocesed_sentences.append(result)
 
